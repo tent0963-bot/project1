@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudRead | E-Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">📚 CloudRead</div>
+        <nav>
+            <input type="text" id="searchBar" placeholder="Search books by title or author...">
+            <button id="openModalBtn" class="btn-primary">+ Add Book</button>
+        </nav>
+    </header>
+
+    <!-- Main Content Panel -->
+    <main>
+        <section class="hero">
+            <h1>Welcome to Your Digital Library</h1>
+            <p>Explore, search, and manage your electronic book collection seamlessly.</p>
+        </section>
+
+        <!-- Dynamic Bookshelf View -->
+        <section class="bookshelf" id="bookshelf">
+            <!-- JavaScript dynamically populates book cards here -->
+        </section>
+    </main>
+
+    <!-- Modal Form overlay for adding books -->
+    <div class="modal" id="bookModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h2>Catalog a New Book</h2>
+            <form id="bookForm">
+                <div class="form-group">
+                    <label for="bookTitle">Book Title</label>
+                    <input type="text" id="bookTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookAuthor">Author</label>
+                    <input type="text" id="bookAuthor" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookCover">Cover Image URL</label>
+                    <input type="url" id="bookCover" placeholder="https://example.com" required>
+                </div>
+                <button type="submit" class="btn-submit">Add to Collection</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
